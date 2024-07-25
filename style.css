@@ -323,6 +323,10 @@
 
 
  @media(max-width:800px){
+  .cards-image{
+    margin-top: 20px;
+
+  }
   .cards{
     flex-direction: column;
     align-items: center;
@@ -331,4 +335,116 @@
     width: 400px;
     height: 300px;
    }
+ }
+
+
+
+ .under-line{
+  height: 5vh;
+  background-color: rgb(6, 163, 198);
+  clip-path: polygon(50% 16%, 51% 3%, 100% 3%, 100% 70%, 100% 100%, 51% 100%, 22% 100%, 0 100%, 0 3%, 49% 3%);
+ }
+
+ @media(max-width:800px){
+  .under-line{
+    clip-path:none;
+    height: auto;
+  }
+ }
+
+
+ .box-for-pillars{
+  height: 40vh;
+  background-color: #FFE24C;
+  display: flex;
+  text-align: center;
+  margin-bottom: 10vh;
+ }
+ .box-for-pillars h4{
+  padding-top: 10px;
+  color: darkred;
+  font-weight: bold;
+  font-size: 25px;
+ }
+
+ .pillar-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 300px;
+  height: 300px;
+  column-gap: 0.5rem;
+  row-gap: 0.5rem;
+  overflow: hidden;
+  margin-right: 1rem;
+ }
+
+ .box-pillar img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+ }
+
+ .pillar-texts{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+ }
+
+ .pillar-texts>div{
+  background-color: darkred;
+  color: white;
+  margin-right: 2rem;
+  transition: 0.5s;
+  width: 200px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 16px;
+ }
+ 
+ .pillar-texts>div:hover{
+  background-color: rgb(120, 3, 3);
+  color: #FFE24C;
+  cursor: pointer;
+ }
+
+ @media(max-width:800px){
+
+  .cards-text p{
+    font-size: 14px;
+    margin-bottom: 4rem;
+  }
+
+  .box-for-pillars{
+    flex-direction: column;
+  }
+
+  .box-for-pillars h4{
+    font-size: medium;
+  }
+  .pillar-grid{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 2rem;
+    width: 550px;
+  }
+  .pillar-texts{
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+  .pillar-texts>div{
+    font-size: small;
+    padding: 1rem;
+    height: 50px;
+    width: 100px;
+    font-size: small;
+  }
+
+  .box-for-pillars{
+    margin-bottom: 1rem;
+    height: 70vh;
+  }
  }
