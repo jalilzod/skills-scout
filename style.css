@@ -215,6 +215,7 @@
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
+
 }
 
 
@@ -274,12 +275,60 @@
 
 
 .cards{
-  height: 100vh;
+  height: 80vh;
 }
 
 
+.cards{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  column-gap: 2rem;
+}
+
+ .cards-image{
+  width: 700px;
+  height: 600px;
+ }
+ 
+ .cards-image img{
+  margin-top: 4rem;
+  object-fit:cover;
+  width: 100%;
+ }
+
+ .cards-text{
+    text-wrap: wrap;
+    width: 400px;
+ }
+
+ .cards-text h3{
+   font-size: xx-large;
+    margin-bottom: 1.2rem;
+    color: darkred;
+    letter-spacing: 1px;
+ }
+
+ .cards-text p{
+  line-height: 1.5;
+  letter-spacing: 1.5px;
+
+ }
+ 
+  p span{
+  color: darkred;
+    font-weight: bold;
+ }
 
 
-
-
-
+ @media(max-width:800px){
+  .cards{
+    flex-direction: column;
+    align-items: center;
+  }
+  .cards-image{
+    width: 400px;
+    height: 300px;
+   }
+ }
