@@ -117,21 +117,7 @@
 
 
 
-.box{
-  background-color: rgba(5, 87, 154, 0.601);
-  height: 100vh;
-  width: 250px;
-  top:0;
-  position: fixed;
-  right: 0;
-  box-shadow: -10px 0 10px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  row-gap: 1rem;
-  transition: 1s;
-}
+
 
 
 .bar-cont{
@@ -202,11 +188,13 @@
   pointer-events: none; /* Ensure it doesn't interfere with interactions */
 }
 .main-page{
+  position: relative;
   background-image: url(imag/3.jpg);
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  margin-bottom: 5rem;
 }
 
 
@@ -280,7 +268,6 @@
 
 
 .cards{
-  margin-top: 20px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -371,7 +358,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 300px;
-  height: 300px;
+  height: 250px;
   column-gap: 0.5rem;
   row-gap: 0.5rem;
   overflow: hidden;
@@ -421,15 +408,14 @@
 
   .box-for-pillars{
     flex-direction: column;
+    height: 80vh;
   }
 
   .box-for-pillars h4{
     font-size: medium;
   }
   .pillar-grid{
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap: 2rem;
-    width: 550px;
+    grid-template-columns: 1fr;
   }
   .pillar-texts{
     flex-direction: column;
@@ -448,3 +434,426 @@
     height: 70vh;
   }
  }
+
+
+ .container{
+  position: relative;
+  width: 350px;
+  height: 400px;
+}
+.card{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition:all 1s ease;
+}
+.front{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: rgb(11, 134, 179);
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image:  url(imag/9.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.front::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(7, 112, 144, 0.438);
+  z-index: 1;
+}
+.front h1{
+  position: relative;
+  color:rgb(255, 255, 255);
+  z-index: 2;
+  margin: 0;
+}
+.back{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: darkred;
+  color: black;
+  transform: rotateY(180deg);
+}
+
+.card:hover{
+  transform: rotateY(180deg);
+}
+
+.cards-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  row-gap: 0.1rem;
+  column-gap: 0.1rem;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+}
+
+@media(max-width:800px){
+  .container{
+    width: 350px;
+    height: 450px;
+    row-gap: 0.2rem;
+    column-gap: 0.2rem;
+  }
+  .cards-grid{
+    grid-template-columns: 1fr;
+    justify-content: flex-start;
+    align-content: flex-start;
+  }
+}
+
+
+.box{
+  background-color: rgba(5, 87, 154, 0.601);
+  height: 100vh;
+  width: 250px;
+  top:0;
+  position:fixed;
+  right: 0;
+  box-shadow: -10px 0 10px rgba(0,0,0,0.1);
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  row-gap: 1rem;
+  transition: 1s;
+}
+
+  .head{
+  background-color: rgb(7, 175, 167);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.head h1{
+  margin: 0;
+  font-size: 50px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+.basketball{
+  background-image: url(imag/5.jpg);
+}
+
+.floorball{
+  background-image: url(imag/77.jpg);
+}
+
+.football{
+  background-image: url(imag/2.jpg);
+}
+
+.gymnastic{
+  background-image: url(imag/33.jpg);
+}
+
+.parkour{
+  background-image: url(imag/parkour.png);
+}
+
+.front button{
+  background-color: darkred;
+  color: white;
+  border: none;
+  padding: 0.3rem 3rem;
+  align-self: center;
+  z-index: 2;
+  font-size: 16px
+}
+
+.more-info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(57, 140, 255);
+}
+
+.more-info button{
+  background-color: darkred;
+  border: 1px solid rgb(10, 149, 180);
+  padding: 1rem 5rem;
+  letter-spacing: 1.5px;
+  font-weight: bold;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  border-radius: 2rem;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.more-info button a{
+  text-decoration: none;
+  color: white;
+}
+
+.more-info button:hover{
+  background-color: rgb(112, 5, 5);
+  color: rgb(153, 146, 146);
+  box-shadow: 3px 3px 10px rgba(162, 4, 4, 0.621);
+}
+.more-info button:active{
+  background-color: darkred;
+  color: rgb(255, 255, 255);
+}
+
+
+.container .back{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.back p{
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: white;
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+.flip-cards{
+  margin-bottom: 5rem;
+}
+
+
+.enroll{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.enroll h3{
+  color: darkred;
+  font-weight: bold;
+  font-size: 25px;
+  margin-bottom: 1rem;
+}
+
+.enroll button {
+  background-color: rgb(24, 112, 255);
+  border: none;
+  padding: 0.5rem 4rem;
+  margin-bottom: 5rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.enroll button a{
+  text-decoration: none;
+  color: white;
+}
+
+.enroll button:hover{
+  background-color:rgb(15, 94, 222);
+  
+}
+.enroll button a:hover{
+  color:rgb(221, 213, 213);
+}
+
+
+
+.container-moments{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 6rem;
+}
+.moments{
+  background-color: #FFE24C;
+  width: 550px;
+  height: 400px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.moments h4{
+  font-size: 35px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  padding-right: 1rem;
+}
+
+.moments-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 600px;
+  height: 400px;
+}
+
+.moment-foto{
+  width: 200px;
+  height: 200px;
+}
+
+.moment-foto img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.foot{
+  height: 30vh;
+  background-color: rgb(59, 59, 56);
+}
+
+
+@media(max-width:800px){
+  .container-moments{
+    flex-direction: column;
+  }
+  .moments h4{
+    padding-right: 3rem;
+  }
+  .enroll button{
+    padding: 1rem 5rem;
+    font-size: 18px;
+  }
+  .moments-grid{
+    grid-template-columns: 1fr 1fr;
+    width: 200px;
+    height: 100px;
+    justify-content: center;
+    margin-bottom: 30rem;
+  }
+
+  .moments{
+    width: 350px;
+    height: 350px;
+    margin-bottom: 1rem;
+  }
+}
+
+
+.cards{
+  margin: 0;
+  margin-bottom: 5rem;
+}
+
+
+.flip-cards{
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+/*athletics*/
+
+.main{
+  height: 100vh;
+  background-image: url(imag/2.jpg);
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.main::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(52, 6, 131, 0.492); /* Adjust color and opacity as needed */
+  z-index: 1;
+  pointer-events: none; 
+}
+
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.main-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3rem;
+}
+.main_texts{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main_texts h1{
+  font-size: 60px;
+  margin: 0;
+  margin-bottom: 1rem;
+  color:white;
+  z-index: 2;
+  font-weight: bold;
+}
+.main_texts h2{
+  color: rgb(234, 227, 25);
+  z-index: 2;
+  font-size: 30px;
+  margin-bottom: 7rem;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.main_button button{
+  background-color: #ffd500;
+  border: none;
+  z-index: 2;
+  padding: 1rem 5rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  font-weight: bold;
+  position: relative;
+  transition: 0.5s;
+}
+
+.main_button button:hover{
+  background-color: rgb(9, 133, 215);
+  color: white;
+}
+
+@media(max-width:800px){
+  .main_button button{
+    font-size: 20px;
+  }
+}
+
+.clip-effect{
+  height: 3rem;
+  background-color: #0872b4;
+  clip-path: polygon(52% 0, 100% 0, 100% 76%, 53% 76%, 52% 100%, 51% 76%, 0 76%, 0 0, 0 0, 0 0);
+  margin-bottom: 5rem;
+}
+
+.box{
+  z-index: 2;
+}
+
+.footbal-intro{
+  height: 60vh;
+  border: 2px solid yellow;
+}
